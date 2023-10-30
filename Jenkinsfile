@@ -13,7 +13,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'pwsh -command echo $username
+        sh 'pwsh -command echo $username'
         sh 'pwsh test.ps1'
       }
     }
