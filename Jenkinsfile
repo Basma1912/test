@@ -1,5 +1,10 @@
 pipeline {
   agent any
+  environment { 
+    username = 'credentials'
+    password = 'credentials'
+
+  }
   stages {
     stage('version') {
       steps {
