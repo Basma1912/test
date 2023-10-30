@@ -1,8 +1,8 @@
 pipeline {
   agent any
   environment { 
-    username = username
-    password = password
+    username = 'username'
+    password = 'password'
 
   }
   stages {
@@ -13,6 +13,7 @@ pipeline {
     }
     stage('hello') {
       steps {
+        sh 'pwsh -command echo $(ENV:$username)'
         sh 'pwsh test.ps1'
       }
     }
