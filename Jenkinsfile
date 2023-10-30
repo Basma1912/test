@@ -1,8 +1,8 @@
 pipeline {
   agent any
   environment { 
-    username = 'username'
-    password = 'password'
+    username = credentials('username')
+    password = credentials('password')
 
   }
   stages {
