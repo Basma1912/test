@@ -13,7 +13,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'pwsh -command echo $(ENV:$username)'
+        sh 'pwsh -command echo $($ENV:username)'
         sh 'pwsh test.ps1'
       }
     }
